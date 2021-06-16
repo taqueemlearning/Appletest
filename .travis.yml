@@ -1,11 +1,10 @@
 language: swift
 osx_image: xcode12.5
 branches:
-   only:
-      - main
-
+  only:
+    - main
 before_install:
   - gem install fastlane --no-ri --no-rdoc --no-document
-install:  true
+install: true
 script:
-  - fatlane scan --scheme TAU --device "iPhone XR"
+  - fastlane scan --scheme TAU --device "iPhone XR"
